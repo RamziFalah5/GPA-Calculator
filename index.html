@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حاسبة المعدل التراكمي</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="hero-panel">
+        <div class="hero-copy">
+          <span class="eyebrow">حاسبة معدل احترافية</span>
+          <h1>حاسبة المعدل التراكمي</h1>
+          <p>
+            احسب المعدل الحالي والمعدل بعد هذا الفصل بسرعة ودقة. أدخل بيانات
+            المعدل السابق والساعات، ثم أدخل درجات المواد<br />
+            (الحد الأقصى 7 مواد).
+          </p>
+          <a href="first-year-calculator.html" class="btn btn-secondary"
+            >حساب المعدل التراكمي لطلاب السنة الأولى</a
+          >
+        </div>
+      </div>
+
+      <main class="calculator-shell">
+        <section class="calculator-card">
+          <div class="section-header">
+            <div>
+              <h2>تفاصيل المعدل</h2>
+              <p>أدخل بياناتك السابقة قبل حساب المعدل.</p>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field-group">
+              <label for="previous-gpa">المعدل التراكمي السابق</label>
+              <input
+                id="previous-gpa"
+                type="number"
+                class="input-control"
+                step="0.01"
+                min="0"
+                max="100"
+                placeholder="مثال: ٨٥.٥"
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="previous-hours"
+                >عدد الساعات التي تم قطعها قبل الفصل الحالي</label
+              >
+              <input
+                id="previous-hours"
+                type="number"
+                class="input-control"
+                step="1"
+                min="0"
+                placeholder="مثال: ٦٠"
+              />
+              <div class="field-note">
+                <p>
+                  * يشمل كافة المواد التي تم اجتيازها بنجاح وايضًا المواد التي
+                  رسبت فيها ولم تعدها قبل الفصل الحالي
+                </p>
+                <p>
+                  * لا يشمل المواد التي لا تدخل في المعدل التراكمي مثل مساقات
+                  التدريب والخدمة الاجتماعية
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-header compact">
+            <div>
+              <h3>
+                مواد الفصل الحالي<br />
+                (الحد الأقصى 7 مواد)
+              </h3>
+              <p>
+                أدخل الساعات والدرجات للمواد<br />
+                (الحد الأقصى 7 مواد).<br />
+                الدرجة بين ٥٠ و ١٠٠.
+              </p>
+            </div>
+          </div>
+
+          <div id="course-list" class="course-list" aria-live="polite">
+            <!-- 7 fixed courses -->
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ١</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة الحالية</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+              <div class="course-cell">
+                <label>العلامة السابقة (إذا معادة)</label>
+                <input
+                  type="number"
+                  class="input-control course-prev-grade"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="اختياري"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٢</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة الحالية</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+              <div class="course-cell">
+                <label>العلامة السابقة (إذا معادة)</label>
+                <input
+                  type="number"
+                  class="input-control course-prev-grade"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="اختياري"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٣</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة الحالية</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+              <div class="course-cell">
+                <label>العلامة السابقة (إذا معادة)</label>
+                <input
+                  type="number"
+                  class="input-control course-prev-grade"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="اختياري"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٤</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة الحالية</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+              <div class="course-cell">
+                <label>العلامة السابقة (إذا معادة)</label>
+                <input
+                  type="number"
+                  class="input-control course-prev-grade"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="اختياري"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٥</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة الحالية</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+              <div class="course-cell">
+                <label>العلامة السابقة (إذا معادة)</label>
+                <input
+                  type="number"
+                  class="input-control course-prev-grade"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="اختياري"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٦</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة الحالية</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+              <div class="course-cell">
+                <label>العلامة السابقة (إذا معادة)</label>
+                <input
+                  type="number"
+                  class="input-control course-prev-grade"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="اختياري"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٧</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة الحالية</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+              <div class="course-cell">
+                <label>العلامة السابقة (إذا معادة)</label>
+                <input
+                  type="number"
+                  class="input-control course-prev-grade"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="اختياري"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div id="form-error" class="form-error hidden" role="alert"></div>
+
+          <div class="actions-bar">
+            <button id="reset-btn" class="btn btn-muted">إعادة تعيين</button>
+            <button id="calculate-btn" class="btn btn-primary">
+              احسب المعدل
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <!-- Modal -->
+      <div id="result-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>نتائج الحساب</h2>
+            <button id="close-modal" class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <section class="result-section">
+              <h3>معدل الفصل الحالي</h3>
+              <div class="result-item">
+                <span>المعدل</span>
+                <strong id="modal-semester-gpa">-</strong>
+                <span id="modal-semester-emoji"></span>
+              </div>
+              <div class="result-item">
+                <span>عدد ساعات الفصل المسجلة</span>
+                <strong id="modal-registered-hours">-</strong>
+              </div>
+              <div class="result-item">
+                <span>عدد ساعات الفصل المنجزة</span>
+                <strong id="modal-completed-hours">-</strong>
+              </div>
+            </section>
+            <section class="result-section">
+              <h3>المعدل التراكمي الجديد</h3>
+              <div class="result-item">
+                <span>المعدل التراكمي</span>
+                <strong id="modal-cumulative-gpa">-</strong>
+                <span id="modal-cumulative-emoji"></span>
+              </div>
+              <div class="result-item">
+                <span>عدد الساعات الكلية المنجزة</span>
+                <strong id="modal-total-completed-hours">-</strong>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

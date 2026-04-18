@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حساب المعدل التراكمي لطلاب السنة الأولى</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="hero-panel">
+        <div class="hero-copy">
+          <span class="eyebrow">حاسبة معدل احترافية</span>
+          <h1>حساب المعدل التراكمي لطلاب السنة الأولى</h1>
+          <p>
+            احسب معدلك التراكمي الأول بسهولة. أدخل درجات المواد<br />
+            (الحد الأقصى 7 مواد) للفصل الأول فقط.
+          </p>
+          <a href="index.html" class="btn btn-muted"
+            >العودة إلى الحاسبة الرئيسية</a
+          >
+        </div>
+      </div>
+
+      <main class="calculator-shell">
+        <section class="calculator-card">
+          <div class="section-header">
+            <div>
+              <h2>مواد الفصل الأول <br />(الحد الأقصى 7 مواد)</h2>
+              <p>
+                أدخل الساعات والدرجات للمواد<br />
+                (الحد الأقصى 7 مواد). الدرجة بين ٥٠ و ١٠٠.
+              </p>
+            </div>
+          </div>
+
+          <div id="course-list" class="course-list" aria-live="polite">
+            <!-- 7 fixed courses -->
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ١</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٢</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٣</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٤</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٥</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٦</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+            </div>
+            <div class="course-row">
+              <div class="course-cell">
+                <label>المادة ٧</label>
+                <input
+                  type="number"
+                  class="input-control course-hours"
+                  step="1"
+                  min="1"
+                  placeholder="ساعات"
+                />
+              </div>
+              <div class="course-cell">
+                <label>الدرجة</label>
+                <input
+                  type="number"
+                  class="input-control course-grade"
+                  min="50"
+                  max="100"
+                  step="1"
+                  placeholder="٥٠-١٠٠"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div id="form-error" class="form-error hidden" role="alert"></div>
+
+          <div class="actions-bar">
+            <button id="reset-btn" class="btn btn-muted">إعادة تعيين</button>
+            <button id="calculate-btn" class="btn btn-primary">
+              احسب المعدل
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <!-- Modal -->
+      <div id="result-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>نتائج الحساب</h2>
+            <button id="close-modal" class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <section class="result-section">
+              <h3>معدل الفصل الأول</h3>
+              <div class="result-item">
+                <span>المعدل</span>
+                <strong id="modal-semester-gpa">-</strong>
+                <span id="modal-semester-emoji"></span>
+              </div>
+              <div class="result-item">
+                <span>عدد ساعات الفصل المسجلة</span>
+                <strong id="modal-registered-hours">-</strong>
+              </div>
+              <div class="result-item">
+                <span>عدد ساعات الفصل المنجزة</span>
+                <strong id="modal-completed-hours">-</strong>
+              </div>
+            </section>
+            <section class="result-section">
+              <h3>المعدل التراكمي الأول</h3>
+              <div class="result-item">
+                <span>المعدل التراكمي</span>
+                <strong id="modal-cumulative-gpa">-</strong>
+                <span id="modal-cumulative-emoji"></span>
+              </div>
+              <div class="result-item">
+                <span>عدد الساعات الكلية المنجزة</span>
+                <strong id="modal-total-completed-hours">-</strong>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/first-year.js"></script>
+  </body>
+</html>
